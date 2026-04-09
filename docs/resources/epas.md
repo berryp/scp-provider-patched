@@ -89,7 +89,7 @@ resource "samsungcloudplatform_epas" "demo_db" {
 - `database_encoding` (String) Epas encoding. (Only 'UTF8' for now)
 - `database_locale` (String) Epas locale. (Only 'C' for now)
 - `database_name` (String) Name of database. (only English alphabets or numbers between 3 and 20 characters)
-- `database_port` (Number) Port number of database. (1024 to 65535)
+- `database_port` (Number) Port number of database. (1200 to 65535)
 - `database_user_name` (String) User account id of database. (2 to 20 lowercase alphabets)
 - `database_user_password` (String, Sensitive) User account password of database.
 - `encryption_enabled` (Boolean) Whether to use storage encryption.

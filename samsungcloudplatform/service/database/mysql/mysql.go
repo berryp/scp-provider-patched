@@ -86,8 +86,8 @@ func ResourceMysql() *schema.Resource {
 			"database_port": {
 				Type:             schema.TypeInt,
 				Required:         true,
-				Description:      "Port number of database. (1024 to 65535)",
-				ValidateDiagFunc: database_common.ValidateIntegerInRange(1024, 65535),
+				Description:      "Port number of database. (1200 to 65535)",
+				ValidateDiagFunc: database_common.ValidateIntegerInRange(1200, 65535),
 			},
 			"database_user_name": {
 				Type:             schema.TypeString,

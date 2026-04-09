@@ -99,7 +99,7 @@ resource "samsungcloudplatform_sqlserver" "my_ms_sql" {
 - `block_storages` (Block List, Min: 1, Max: 10) block storage. (see [below for nested schema](#nestedblock--block_storages))
 - `database_collation` (String) Commands that specify how to sort and compare data
 - `database_names` (List of String) Database Name List
-- `database_port` (Number) Port number of this database. (1024 to 65535)
+- `database_port` (Number) Port number of this database. (1200 to 65535)
 - `database_service_name` (String) MS SQL Server Database Service name
 - `database_user_name` (String) User account id of database. (2 to 20 alpha-numerics)
 - `database_user_password` (String, Sensitive) User account password of database.

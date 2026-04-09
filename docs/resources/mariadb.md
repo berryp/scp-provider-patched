@@ -87,7 +87,7 @@ resource "samsungcloudplatform_mariadb" "demo_db" {
 - `block_storages` (Block List, Min: 1, Max: 10) block storage. (see [below for nested schema](#nestedblock--block_storages))
 - `database_character_set` (String) Mariadb encoding. (utf8|utf8mb4)
 - `database_name` (String) Name of database. (only English alphabets or numbers between 3 and 20 characters)
-- `database_port` (Number) Port number of database. (1024 to 65535)
+- `database_port` (Number) Port number of database. (1200 to 65535)
 - `database_user_name` (String) User account id of database. (2 to 20 lowercase alphabets)
 - `database_user_password` (String, Sensitive) User account password of database.
 - `encryption_enabled` (Boolean) Whether to use storage encryption.

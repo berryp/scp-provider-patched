@@ -95,8 +95,8 @@ func ResourceRedisCluster() *schema.Resource {
 			"database_port": {
 				Type:             schema.TypeInt,
 				Optional:         true,
-				Description:      "Port number of this database. (1024 to 65535)",
-				ValidateDiagFunc: database_common.ValidateIntegerInRange(1024, 65535),
+				Description:      "Port number of this database. (1200 to 65535)",
+				ValidateDiagFunc: database_common.ValidateIntegerInRange(1200, 65535),
 			},
 			//servergroup
 			"server_type": {

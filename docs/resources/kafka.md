@@ -121,13 +121,13 @@ resource "samsungcloudplatform_kafka" "demo_db" {
 - `akhq_node` (Block Set, Max: 1) AKHQ node (see [below for nested schema](#nestedblock--akhq_node))
 - `akhq_password` (String, Sensitive) Password of AKHQ.
 - `availability_zone_config` (Block Set) Availability Zone Config (see [below for nested schema](#nestedblock--availability_zone_config))
-- `broker_port` (Number) Port number of broker. (1024 to 65535)
+- `broker_port` (Number) Port number of broker. (1200 to 65535)
 - `nat_enabled` (Boolean) Whether to use nat.
 - `tags` (Map of String)
 - `timeouts` (Block, Optional) (see [below for nested schema](#nestedblock--timeouts))
 - `zookeeper_block_storages` (Block List, Max: 1) Zookeeper block storage. (see [below for nested schema](#nestedblock--zookeeper_block_storages))
 - `zookeeper_nodes` (Block List, Max: 3) Zookeeper nodes (see [below for nested schema](#nestedblock--zookeeper_nodes))
-- `zookeeper_port` (Number) Port number of zookeeper. (1024 to 65535)
+- `zookeeper_port` (Number) Port number of zookeeper. (1200 to 65535)
 - `zookeeper_server_type` (String) Zookeeper server type
 
 ### Read-Only

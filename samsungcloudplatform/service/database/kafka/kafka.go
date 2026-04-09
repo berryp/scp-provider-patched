@@ -97,8 +97,8 @@ func ResourceKafka() *schema.Resource {
 			"broker_port": {
 				Type:             schema.TypeInt,
 				Optional:         true,
-				Description:      "Port number of broker. (1024 to 65535)",
-				ValidateDiagFunc: database_common.ValidateIntegerInRange(1024, 65535),
+				Description:      "Port number of broker. (1200 to 65535)",
+				ValidateDiagFunc: database_common.ValidateIntegerInRange(1200, 65535),
 			},
 			"zookeeper_sasl_account": {
 				Type:             schema.TypeString,
@@ -116,8 +116,8 @@ func ResourceKafka() *schema.Resource {
 			"zookeeper_port": {
 				Type:             schema.TypeInt,
 				Optional:         true,
-				Description:      "Port number of zookeeper. (1024 to 65535)",
-				ValidateDiagFunc: database_common.ValidateIntegerInRange(1024, 65535),
+				Description:      "Port number of zookeeper. (1200 to 65535)",
+				ValidateDiagFunc: database_common.ValidateIntegerInRange(1200, 65535),
 			},
 			"akhq_account": {
 				Type:             schema.TypeString,

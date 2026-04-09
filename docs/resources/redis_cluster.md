@@ -135,7 +135,7 @@ resource "samsungcloudplatform_redis_cluster" "demo_db" {
 ### Optional
 
 - `backup` (Block Set, Max: 1) (see [below for nested schema](#nestedblock--backup))
-- `database_port` (Number) Port number of this database. (1024 to 65535)
+- `database_port` (Number) Port number of this database. (1200 to 65535)
 - `nat_enabled` (Boolean) Whether to use nat.
 - `shards_count` (Number) Number of Masters.
 - `shards_replica_count` (Number) Number of Replicas created per Master.
