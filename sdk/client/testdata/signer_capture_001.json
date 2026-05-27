@@ -1,0 +1,61 @@
+{
+  "captured_at": 1778728851.01267,
+  "request": {
+    "body_canonical": "",
+    "body_raw": "",
+    "headers": {
+      "stable": {
+        "accept": "*/*",
+        "accept-encoding": "gzip",
+        "host": "openapi.samsungsdscloud.com",
+        "x-cmp-accesskey": "9136/5LY5XCQcurvagdP",
+        "x-cmp-clienttype": "OpenApi",
+        "x-cmp-companyid": "",
+        "x-cmp-language": "en-US",
+        "x-cmp-loginid": "devops@o9solutions.com",
+        "x-cmp-projectid": "PROJECT-nMnc4vToqXfIZDQZfHMYMf",
+        "x-cmp-useremail": "devops@o9solutions.com",
+        "x-cmp-userid": "11239"
+      },
+      "volatile": {
+        "User-Agent": "scp-trf/3.16.1",
+        "X-Cmp-Signature": "eOWX9f91sSK53HadviGWujYdoTTmENunE7brrV6x5r0=",
+        "X-Cmp-Timestamp": "1778728850883"
+      }
+    },
+    "host": "openapi.samsungsdscloud.com",
+    "masked_path": "/project/v3/projects/PROJECT-nMnc4vToqXfIZDQZfHMYMf",
+    "method": "GET",
+    "path": "/project/v3/projects/PROJECT-nMnc4vToqXfIZDQZfHMYMf",
+    "query_pairs_sorted": []
+  },
+  "response": {
+    "body_canonical": "{\"code\":\"PLATFORM-GW-00003\",\"contactUrl\":\"https://cloud.samsungsds.com\",\"message\":\"Signature does not match\",\"path\":\"/project/v3/projects/PROJECT-nMnc4vToqXfIZDQZfHMYMf\",\"requestId\":\"<MASKED>\",\"service\":\"GW\",\"status\":412,\"timestamp\":\"2026-05-14T12:20:51.016Z\"}",
+    "headers": {
+      "stable": {
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "cf-cache-status": "DYNAMIC",
+        "cf-ray": "9fb6c4f6ab5b326c-ICN",
+        "cf-team": "2ec6196e200000c8df980d9400000001",
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Thu, 14 May 2026 03:20:51 GMT",
+        "expires": "0",
+        "pragma": "no-cache",
+        "referrer-policy": "no-referrer",
+        "server": "cloudflare",
+        "server-timing": "cfReqDur;dur=30.075",
+        "strict-transport-security": "max-age=31536000 ; includeSubDomains",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "x-xss-protection": "0"
+      },
+      "volatile": {
+        "Content-Length": "333",
+        "Set-Cookie": "INGRESSCOOKIE=1778728852.012.1133.656754; Path=/.+; Secure; HttpOnly",
+        "set-cookie": "__cf_bm=prQRRW2HAy1y13yu.jtpKX7Is8xYfK9YfSh98ZCINTs-1778728850.9848466-1.0.1.1-ob3DfaHroEzCPmeTLR8Toc2ge3rwJ96WvZhE9mRzV.aLwXI2MMbzyJ8AGPceIta55YAT7MTwNA7NYunelo3AV7qcl9sq68nhWp6yqNshW1Z09V_Ihm7pVVTgCsTfCeRv; HttpOnly; SameSite=None; Secure; Path=/; Domain=openapi.samsungsdscloud.com; Expires=Thu, 14 May 2026 03:50:51 GMT"
+      }
+    },
+    "status": 412
+  }
+}
