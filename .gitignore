@@ -26,7 +26,9 @@
 go.work
 
 ### Go Patch ###
-/vendor/
+# vendor/ is intentionally committed: this patched provider must build in an
+# airgapped environment, so the vendored module tree is part of the repo.
+# Do NOT re-add /vendor/ to this ignore list.
 /Godeps/
 
 ### Goland ###

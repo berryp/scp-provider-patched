@@ -41,6 +41,12 @@ pipeline {
     }
     environment {
         BINARY_NAME = 'terraform-provider-samsungcloudplatform'
+        // Force vendored builds and forbid any network access to module
+        // proxies. If vendor/ is ever incomplete the build fails loudly here
+        // instead of silently downloading — this is what keeps the build
+        // reproducible in an airgapped agent.
+        GOFLAGS = '-mod=vendor'
+        GOPROXY = 'off'
     }
     stages {
         stage('Build') {
