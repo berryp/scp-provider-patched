@@ -1,5 +1,21 @@
 # Terraform Provider for Samsung Cloud Platform
 
+> [!WARNING]
+> **Patched provider — limited scope.**
+>
+> This is a **patched fork** of the Samsung Cloud Platform (SCP) Terraform provider,
+> not the upstream release. It deliberately implements **only** the following endpoints:
+>
+> - **Kubernetes node pool**
+> - **Kubernetes namespace**
+>
+> All other resources and data sources from the upstream provider are **not** supported here.
+>
+> This fork exists specifically to serve the branch `berry-scp-tfdrift` branch of the
+> `terragrunt-profiles/` repo. It is not intended for general-purpose use — if you
+> need the full provider surface, use the official upstream
+> `SamsungSDSCloud/samsungcloudplatform` provider instead.
+
 ## Directory structure
 
 - `docs` : Auto-generated documentation
