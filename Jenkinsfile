@@ -41,6 +41,7 @@ pipeline {
     }
     environment {
         BINARY_NAME = 'terraform-provider-samsungcloudplatform'
+        GOTOOLCHAIN = 'go1.26.4'
     }
     stages {
         stage('Build') {
@@ -52,7 +53,6 @@ if ! command -v go >/dev/null 2>&1; then
     echo "ERROR: go toolchain not found on PATH; install Go on the Jenkins agent." >&2
     exit 1
 fi
-echo "Using $(go version)"
 
 # Build into a temp file in the same directory as the final binary so the
 # atomic rename below works on the same filesystem. We never overwrite the
@@ -60,6 +60,11 @@ echo "Using $(go version)"
 TMP_BIN="$(mktemp -p "${WORKSPACE}" "${BINARY_NAME}.new.XXXXXX")"
 trap 'rm -f "${TMP_BIN}"' EXIT
 
+# Install required go toolchain
+go install golang.org/dl/${GOTOOLCHAIN}@latest
+echo "Using $(go version)"
+
+echo "Running go build"
 GOOS=linux GOARCH=amd64 CGO_ENABLED=0 \\
     go build -mod=vendor -o "${TMP_BIN}" .
 
@@ -73,7 +78,7 @@ MARKERS=(
     'desired_node_count is not supported when auto_scale is enabled'
 )
 for m in "${MARKERS[@]}"; do
-    if ! strings "${TMP_BIN}" | grep -q "$m"; then
+    if ! grep -aq "$m" "${TMP_BIN}"; then
         echo "ERROR: built binary is missing required marker: $m" >&2
         exit 1
     fi
